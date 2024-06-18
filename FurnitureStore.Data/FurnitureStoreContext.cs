@@ -1,4 +1,5 @@
 ﻿using FurnitureStore.Shared;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FurnitureStore.Data
 {
-    public class FurnitureStoreContext : DbContext
+    public class FurnitureStoreContext : IdentityDbContext
     {
         public FurnitureStoreContext(DbContextOptions options) : base(options) { }
         public DbSet<Client> Clients { get; set; }
