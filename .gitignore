@@ -406,3 +406,7 @@ FodyWeavers.xsd
 /FurnitureStore.Data/obj/Debug/net8.0/FurnitureStore.Data.pdb
 /FurnitureStore.Data/obj/Debug/net8.0/ref/FurnitureStore.Data.dll
 /FurnitureStore.Shared/obj/Debug/net8.0/ref/FurnitureStore.Shared.dll
+/FurnitureStore.API/obj/Debug/net8.0/FurnitureStore.API.assets.cache
+/FurnitureStore.API/obj/project.assets.json
+/FurnitureStore.API/obj/FurnitureStore.API.csproj.nuget.dgspec.json
+/FurnitureStore.API/obj/project.nuget.cache
