@@ -19,17 +19,21 @@ namespace FurnitureStore.API.Controllers
     {
         private readonly UserManager<IdentityUser> _userManager;
         private readonly JwtConfig _jwtConfig;
+        private readonly ILogger<AuthenticationController> _logger;
 
         public AuthenticationController(UserManager<IdentityUser> userManager,
-                                            IOptions<JwtConfig> jwtConfig)
+                                            IOptions<JwtConfig> jwtConfig,
+                                            ILogger<AuthenticationController> logger)
         {
             _userManager = userManager;
             _jwtConfig = jwtConfig.Value;
+            _logger = logger;
         }
 
         [HttpPost("Register")]
         public async Task<IActionResult> Register([FromBody] UserRegistrationRequestDto request)
         {
+            _logger.LogWarning("A user is trying to register");
             if(!ModelState.IsValid) return BadRequest();
 
             //Verify if email exist
